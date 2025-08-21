@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  frpc:
+    image: ghcr.io/sunboss/homeassistant-frpc:latest
+    container_name: frpc
+    volumes:
+      - ./config.yaml:/config/config.yaml
+    restart: always
