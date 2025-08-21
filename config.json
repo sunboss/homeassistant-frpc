@@ -1,0 +1,22 @@
+{
+  "name": "FRPC",
+  "version": "20250821.1",
+  "slug": "frpc",
+  "description": "FRPC Client for Home Assistant",
+  "startup": "application",
+  "boot": "auto",
+  "ports": {
+    "8080/tcp": 8080,
+    "5000/tcp": 5000
+  },
+  "map": [
+    "config:rw",
+    "addons:rw",
+    "ssl:rw"
+  ],
+  "webui": "http://[HOST]:[PORT:8080]",
+  "arch": ["amd64", "aarch64", "armv7", "armhf", "i386"],
+  "repository": "https://github.com/sunboss/homeassistant-frpc",
+  "homeassistant_api": true,
+  "hassio": true
+}
