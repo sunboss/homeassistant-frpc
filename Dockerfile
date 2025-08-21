@@ -1,7 +1,7 @@
 # Set the base image
 FROM alpine:3.16
 
-# Declare the architecture as an argument
+# Declare the architecture as an argument, with default value 'amd64'
 ARG ARCH=amd64
 
 # Install dependencies
