@@ -1,12 +1,22 @@
-# Home Assistant FRPC Add-On Configuration
-# This file defines the necessary configuration for FRPC to connect to a remote FRP server
-
-server: "your.frp.server"       # The FRP server address
-server_port: 7000               # The port of the FRP server (default is 7000)
-token: "your-frp-token"         # The token for authentication with the FRP server
-
-ports:
-  - local_port: 8080            # Local port to be forwarded (e.g., HTTP)
-    remote_port: 80             # Remote port on the server
-  - local_port: 5000            # Another local port to be forwarded
-    remote_port: 5000           # Remote port for service B
+{
+  "name": "FRPC",
+  "version": "20250821.1",
+  "slug": "frpc",
+  "description": "FRPC Client for Home Assistant",
+  "startup": "application",
+  "boot": "auto",
+  "ports": {
+    "8080/tcp": 8080,
+    "5000/tcp": 5000
+  },
+  "map": [
+    "config:rw",
+    "addons:rw",
+    "ssl:rw"
+  ],
+  "webui": "http://[HOST]:[PORT:8080]",
+  "arch": ["amd64", "aarch64", "armv7", "armhf", "i386"],
+  "repository": "https://github.com/sunboss/homeassistant-frpc",
+  "homeassistant_api": true,
+  "hassio": true
+}
