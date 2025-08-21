@@ -8,7 +8,8 @@ RUN apk add --no-cache \
     ca-certificates
 
 # Download and install FRPC
-RUN curl -L -o /tmp/frpc.tar.gz https://github.com/fatedier/frp/releases/download/v0.48.0/frpc_0.48.0_linux_amd64.tar.gz && \
+RUN curl -L -o /tmp/frpc.tar.gz \
+    https://github.com/fatedier/frp/releases/download/v0.48.0/frpc_0.48.0_linux_$(ARCH).tar.gz && \
     tar -xvzf /tmp/frpc.tar.gz -C /tmp && \
     mv /tmp/frpc_*/frpc /usr/local/bin/ && \
     chmod +x /usr/local/bin/frpc && \
