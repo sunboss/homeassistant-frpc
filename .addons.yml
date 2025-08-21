@@ -1,0 +1,6 @@
+channel: stable
+addons:
+  frpc:
+    repository: sunboss/homeassistant-frpc
+    target: frpc
+    image: ghcr.io/sunboss/homeassistant-frpc:latest
