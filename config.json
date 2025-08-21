@@ -1,6 +1,6 @@
 {
   "name": "FRPC",
-  "version": "20250821.1",
+  "version": "20250821.12",
   "slug": "frpc",
   "description": "FRPC Client for Home Assistant",
   "startup": "application",
