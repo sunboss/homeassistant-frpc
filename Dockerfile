@@ -16,10 +16,3 @@ RUN curl -L -o /tmp/frpc.tar.gz \
     tar -xvzf /tmp/frpc.tar.gz -C /tmp && \
     mv /tmp/frpc_*/frpc /usr/local/bin/ && \
     chmod +x /usr/local/bin/frpc && \
-    rm -rf /tmp/frpc.tar.gz /tmp/frpc_*
-
-# Add entrypoint for FRPC
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
