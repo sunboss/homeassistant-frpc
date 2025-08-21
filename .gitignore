@@ -1,0 +1,9 @@
+# Ignore the build directory
+/build/
+
+# Ignore .env file
+.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db
